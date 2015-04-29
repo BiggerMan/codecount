@@ -11,7 +11,7 @@ list_alldir()
 			if [ -d "$1/$file" ];then
 				list_alldir "$1/$file"
 			else
-				if [[ $file =~ \.c$ ||$file =~ \.h$ ]];then
+				if [[ $file =~ \.c$ || $file =~ \.h$ ]];then
 					echo "$1/$file"
 					files=$files+1
 					lines=$lines+`cat "$1/$file"|wc -l`
